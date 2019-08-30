@@ -6,8 +6,12 @@
   "scripts": {
     "test": "mocha \"./test/**/*.spec.js\""
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Ahmed Awadallah",
+    "email": "aawadall@ualberta.net",
+    "url": "https://github.com/aawadall"
+  },
+  "license": "MIT",
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
