@@ -20,11 +20,26 @@ describe('Lane', function(){
                 lane.name.should.equal(name);
             })
         });
-        it('Should have segments');
-        it('Should have traffice source');
-        it('Should have traffic sink');
-        it('Should have traffic controller');
-        it('Should have wait times');
+        describe('Segments', function(){
+            it('Should have segments');
+        });
+        
+        describe('Source', function(){
+            it('Should have traffic source');
+        });
+        
+        describe('Sink', function(){
+            it('Should have traffic sink');
+        });
+        
+        describe('Controller', function(){
+            it('Should have traffic controller');
+        });
+        
+        describe('Wait-Time', function(){
+            it('Should have wait times');
+        });
+        
     });
     describe('Simulator', function(){
         it('Should simulate traffic');
