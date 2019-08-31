@@ -1,6 +1,7 @@
 var Segment = require('../simulator/segment');
 var chai = require('chai');
 chai.use(require('chai-events'));
+chai.use(require('chai-as-promised'));
 var should = chai.should();
 
 describe('Segment', function () {
@@ -76,35 +77,5 @@ describe('Segment', function () {
             });
         });
 
-        describe('Events', function () {
-            describe('Emitted events', function () {
-                it('Should emit flow event when new cars enter', function () {
-                    segment.fill(inFlux);
-                    segment.should.emit('flow');
-                });
-                it('Should emit empty event when last car exit', function () {
-                    segment.fill(inFlux);
-                    for (var index = 0; index < 1 + segment.capacity / outFlux; index++) {
-                        segment.drain(outFlux);
-                    }
-                    segment.should.emit('empty');
-                });
-                it('Should emit full event when capacity reached', function () {
-                    for (var index = 0; index < 1 + segment.capacity / inFlux; index++) {
-                        segment.fill(inFlux);
-                    }
-                    segment.should.emit('full');
-                });
-
-            });
-
-            describe('Handled events', function () {
-
-            });
-
-            describe('Piped events', function () {
-
-            });
-        });
     });
 });
