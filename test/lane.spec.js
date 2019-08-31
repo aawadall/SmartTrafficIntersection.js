@@ -4,11 +4,15 @@ var Lane = require('../simulator/lane');
 
 
 describe('Lane', function(){
-    this.beforeEach('Lane Loader', function(){
+    const name = 'Mock Lane';
+    let lane = null;
 
+    this.beforeEach('Lane Loader', function(){
+        lane = new Lane(name);
     });
 
     describe('Lane attributes', function(){
+        
         it('Should have segments');
         it('Should have traffice source');
         it('Should have traffic sink');

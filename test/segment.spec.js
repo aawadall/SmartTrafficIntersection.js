@@ -5,6 +5,7 @@ chai.use(require('chai-as-promised'));
 var should = chai.should();
 
 describe('Segment', function () {
+    const name = 'Mock Segment';
     var segment = null;
     var capacity = 5;
     var inFlux = 2;
@@ -12,28 +13,41 @@ describe('Segment', function () {
 
     this.beforeEach('Segment Loader', function () {
 
-        segment = new Segment('Mock Segment', capacity, inFlux, outFlux);
+        segment = new Segment(name, capacity, inFlux, outFlux);
     });
 
     describe('Segment Attributes', function () {
-        it('Should have a capacity', function () {
-            segment.should.have.property('capacity');
-            segment.capacity.should.equal(capacity);
+        describe('Name', function () {
+            it('Should have a name', function () {
+                segment.should.have.property('name');
+            });
+            it(`Should have the name equal to ${name}`, function () {
+                segment.name.should.equal(name);
+            });
         });
-        it('Should have capacity populated', function () {
-            segment.capacity.should.equal(capacity);
+        describe('Capacity', function () {
+            it('Should have a capacity', function () {
+                segment.should.have.property('capacity');
+            });
+            it(`Should have the capacity equal to ${capacity}`, function () {
+                segment.capacity.should.equal(capacity);
+            });
         });
-        it('Should have in-flux', function () {
-            segment.should.have.property('inFlux');
+        describe('InFlux', function () {
+            it('Should have in-flux', function () {
+                segment.should.have.property('inFlux');
+            });
+            it(`Should have in-flux equal to ${inFlux}`, function () {
+                segment.inFlux.should.equal(inFlux);
+            });
         });
-        it('Should have in-flux populated', function () {
-            segment.inFlux.should.equal(inFlux);
-        });
-        it('Should have out-flux', function () {
-            segment.should.have.property('outFlux');
-        });
-        it('Should have out-flux populated', function () {
-            segment.outFlux.should.equal(outFlux);
+        describe('OutFlux', function () {
+            it('Should have out-flux', function () {
+                segment.should.have.property('outFlux');
+            });
+            it(`Should have out-flux equal to ${outFlux}`, function () {
+                segment.outFlux.should.equal(outFlux);
+            });
         });
     });
 
