@@ -1,19 +1,33 @@
-var EventEmitter = require('events');
+const EventEmitter = require('events');
 
-class Simulator extends EventEmitter{
-    constructor() {
-        this.lanes = [];
-        this.sources = [];
-        this.sinks = [];
-    }
+/**
+ * Global simulator
+ */
+class Simulator extends EventEmitter {
+  /**
+   * Simulator constructor
+   */
+  constructor() {
+    super();
+    this.lanes = [];
+    this.sources = [];
+    this.sinks = [];
+  }
 
-    addLane = function(lane) {
-        lanes.add(lane);
-    }
+  /**
+   * adds a lane to the simulator
+   * @param {Lane} lane made of source, sink, segments and a controller
+   */
+  addLane(lane) {
+    lanes.add(lane);
+  }
 
-    tick = function(){
-        
-    }
+  /**
+   * Simulates traffic
+   */
+  tick() {
+    // Not implemented
+  }
 }
 
 module.exports = Simulator;

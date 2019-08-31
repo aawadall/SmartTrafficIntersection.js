@@ -1,0 +1,5 @@
+{
+  "space_after_named_function": false,
+  "indent_size": 2,
+  "end_with_newline": true
+}
