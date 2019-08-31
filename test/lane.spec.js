@@ -21,23 +21,33 @@ describe('Lane', function(){
             })
         });
         describe('Segments', function(){
-            it('Should have segments');
+            it('Should have segments', function(){
+                lane.should.have.property('segments');
+            });
         });
         
         describe('Source', function(){
-            it('Should have traffic source');
+            it('Should have traffic source', function(){
+                lane.should.have.property('source');
+            });
         });
         
         describe('Sink', function(){
-            it('Should have traffic sink');
+            it('Should have traffic sink', function(){
+                lane.should.have.property('sink');
+            });
         });
         
         describe('Controller', function(){
-            it('Should have traffic controller');
+            it('Should have traffic controller', function(){
+                lane.should.have.property('controller');
+            });
         });
         
         describe('Wait-Time', function(){
-            it('Should have wait times');
+            it('Should have wait times', function(){
+                lane.should.have.property('waitTimes');
+            });
         });
         
     });
