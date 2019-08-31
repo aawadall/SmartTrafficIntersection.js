@@ -4,7 +4,8 @@
   "description": "Smart Traffic Intersection using Reinforcement learning ML",
   "main": "app.js",
   "scripts": {
-    "test": "mocha \"./test/**/*.spec.js\""
+    "test": "mocha \"./test/**/*.spec.js\"",
+    "posttest": "./node_modules/.bin/eslint \"./**/*.js\""
   },
   "author": {
     "name": "Ahmed Awadallah",
@@ -21,6 +22,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-events": "0.0.3",
     "chai-uuid": "^1.0.6",
-    "eslint": "^6.3.0"
+    "eslint": "^6.3.0",
+    "eslint-config-google": "^0.13.0"
   }
 }
