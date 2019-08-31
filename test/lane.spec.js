@@ -12,7 +12,14 @@ describe('Lane', function(){
     });
 
     describe('Lane attributes', function(){
-        
+        describe('Name', function(){
+            it('Should have a name', function(){
+                lane.should.have.property('name');
+            });
+            it(`Should be equal to ${name}`, function(){
+                lane.name.should.equal(name);
+            })
+        });
         it('Should have segments');
         it('Should have traffice source');
         it('Should have traffic sink');
