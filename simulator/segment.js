@@ -31,7 +31,6 @@ class Segment extends EventEmitter {
       this.occupancy += actualSize;
       return actualSize;
     } else {
-
       return 0;
     }
   }
