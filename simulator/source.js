@@ -21,9 +21,7 @@ class Source extends EventEmitter {
    * Simulates traffic
    */
   tick() {
-    this.emit('flow', (flux) => {
-      flux = Math.floor(Math.random() * outFlux);
-    });
+      return Math.floor(Math.random() * outFlux);
   }
 }
 

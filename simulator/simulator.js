@@ -26,7 +26,7 @@ class Simulator extends EventEmitter {
    * Simulates traffic
    */
   tick() {
-    // Not implemented
+    this.emit('tick');
   }
 }
 

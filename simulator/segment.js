@@ -28,11 +28,10 @@ class Segment extends EventEmitter {
   fill(size) {
     const actualSize = Math.min(this.inFlux, size);
     if (this.occupancy + actualSize <= this.capacity) {
-      this.emit('flow');
       this.occupancy += actualSize;
       return actualSize;
     } else {
-      this.emit('full');
+
       return 0;
     }
   }
@@ -45,9 +44,6 @@ class Segment extends EventEmitter {
   drain(size) {
     const actualSize = Math.min(this.inFlux, size, this.occupancy);
     this.occupancy -= actualSize;
-    if (this.occupancy == 0) {
-      this.emit('empty');
-    }
     return actualSize;
   }
 }
